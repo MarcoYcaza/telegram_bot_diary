@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram Whisper diary bot
+After=network.target
+
+[Service]
+Type=simple
+#User=ubuntu            # or your non‑root user
+WorkingDirectory=/root/[FOLDER_NAME]
+EnvironmentFile=/root/[FOLDER_NAME]/.env
+ExecStart=/root/[FOLDER_NAME]/.venv/bin/python3 diary.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
