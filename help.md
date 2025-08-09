@@ -1,3 +1,3 @@
 systemctl daemon-reload
-systemctl restart kathy-bot.service
-journalctl -u kathy-bot.service
+systemctl restart diary.service
+journalctl -u diary.service
